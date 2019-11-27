@@ -12,7 +12,7 @@ import java.util.Deque;
  *
  * @author Johannes
  */
-class MyStack {
+class MyStack<E> {
 
     private final Deque<Integer> items;
 

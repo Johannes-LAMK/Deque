@@ -11,7 +11,7 @@ import java.util.Deque;
  *
  * @author Johannes
  */
-public class MyQueue {
+public class MyQueue<E> {
 
     private final Deque<Integer> items;
 

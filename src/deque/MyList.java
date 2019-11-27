@@ -12,7 +12,7 @@ import java.util.Deque;
  *
  * @author Johannes
  */
-public class MyList {
+public class MyList<E> {
 
     private final Deque<Integer> items;
 
@@ -20,6 +20,8 @@ public class MyList {
         this.items = new ArrayDeque<>();
     }
 
+    
+    // there is no way to put items in a list with an index so we turn list to array
     public void add(int item, int index) {
         Object[] toArray = items.toArray();
         if (toArray.length > 0) {
@@ -48,7 +50,7 @@ public class MyList {
     public void remove(int index) {
         Object[] toArray = items.toArray();
         if (toArray.length > 0) {
-            int[] arr = new int[toArray.length];
+            int[] arr = new int[toArray.length - 1];
             for (int i = 0; i < arr.length; i++) {
                 if (index != i) {
                     arr[i] = (int) toArray[i];

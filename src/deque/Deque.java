@@ -15,11 +15,12 @@ public class Deque {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        MyStack myStack = new MyStack();
+        // Create mystack and push ten items
+        MyStack<Integer> myStack = new MyStack();
         for (int i = 0; i < 10; i++) {
             myStack.push(i);
         }
+        // Print before and after pop()
         System.out.println("MyStack:");
         System.out.println("Before popping: \t" + myStack + "\nisEmpty(): " + myStack.isEmpty());
         for (int i = 0; i < 5; i++) {
@@ -32,7 +33,7 @@ public class Deque {
         System.out.println("After popping 5 x: \t" + myStack + "\nisEmpty(): " + myStack.isEmpty());
         System.out.println();
         System.out.println("MyQueue:");
-        MyQueue myQueue = new MyQueue();
+        MyQueue<Integer> myQueue = new MyQueue();
         for (int i = 0; i < 10; i++) {
             myQueue.add(i);
         }
@@ -43,8 +44,10 @@ public class Deque {
         }
         System.out.println("removed 5 items: \t" + myQueue);
         System.out.println();
+        
+        // Add items to mylist
         System.out.println("MyList: ");
-        MyList myList = new MyList();
+        MyList<Integer> myList = new MyList();
         for (int i = 0; i < 10; i++) {
             myList.add(i, i);
         }
